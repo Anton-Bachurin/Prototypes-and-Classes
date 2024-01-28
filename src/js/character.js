@@ -7,18 +7,14 @@ export default class Character {
         'Undead',
         'Zombie',
         'Daemon'
-    ]
+      ]
   
-      function checkNameLength(character){
-        if (character.name.length < 2 || character.name.length > 10) {
+      if (name.length < 2 || name.length > 10) {
           throw new Error('min 2 letters, max 10 letters');
-        }
       }
-  
-      function checkType(type){
-        if (!(types.includes(type))) {
-          throw new Error('Choose a correct type');
-        }
+      
+      if (!(types.includes(type))) {
+        throw new Error('Choose a correct type');
       }
 
       this.name = name;
